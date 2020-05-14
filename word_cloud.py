@@ -39,22 +39,6 @@ def splitParts(text):
             end2 = index - 5 
             break
     return [' '.join(tokens[beg1:end1]), ' '.join(tokens[beg2:end2]) ]
-
-def splitParagraphs(text):
-    ''' \n is a line break as read (not new paragraph), so should be kept together;
-    \n\n is a new paragraph, so will be used as splitting indicator;
-    \n\n\n is a page break in the book (not new paragraph), so should be together '''
-    text = text.replace('\n\n\n', ' ') # connect the page break as entire text
-    textList = []
-    beg_index = 1
-    for char in range(len(text) - 2):
-        if text[char] == '\n' and text[char+1] == '\n':
-            end_index = char
-            textList.append(text[beg_index:end_index])
-            beg_index = char + 2
-        if beg_index > len(text):
-            break        
-    return textList # total of 221 paragraphs in the book
     
 def processText(text):
     ''' text is a string type, make all characters lowercase, 
@@ -85,16 +69,19 @@ def wordcloudFromOneWord():
         [part1, part2] = splitParts(text)
     [part1processed, part2processed] = [processText(part1), processText(part2)]    
     [cloudtext1, cloudtext2] = [removeWords(part1processed), removeWords(part2processed)]
-    ''' create word clouds, separate between two parts '''
+    ''' create word clouds generator '''
     arrêt = set(nltk.corpus.stopwords.words('french')) # 'stopwords' en français
-    cloud1 = WordCloud(background_color = "white", max_words = 200, stopwords = arrêt).generate(cloudtext1)
+    arrêt = arrêt.union({'avoir', 'être', 'ça', 'cela', 'cet', 'cette'})
+    cloud = WordCloud(background_color = "white", max_words = 200, stopwords = arrêt)
+    ''' separate word clouds between two parts'''
+    cloud1 = cloud.generate(cloudtext1)
     part1 = cloud1.to_array()
     plt.figure()
     plt.title("PREMIÈRE PARTIE")
     plt.imshow(part1, interpolation="bilinear")
     plt.axis("off")
     plt.show()
-    cloud2 = WordCloud(background_color = "white", max_words = 200, stopwords = arrêt).generate(cloudtext2)
+    cloud2 = cloud.generate(cloudtext2)
     part2 = cloud2.to_array()
     plt.figure()
     plt.title("DEUXIÈME PARTIE")

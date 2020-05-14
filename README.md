@@ -13,7 +13,7 @@ The book in original language (French) was downloaded from this [website](http:/
 Some of the **natural language processing** techniques were employed to create the word clouds. This includes:
 - text mining and re-constructing paragraphs
 - making lowercase text and removing non-alphabets/punctuations
-- removing **"stop words"** (in french)
+- removing **"stop words"** (in french); the stop word set covers pronouns e.g. "je", "y", "lui", prepositions e.g. "à", "avec", "de", parts of speech of the verbes "avoir" and "être", articles e.g. "le", "l'".
 - tokenizing words from string
 
 To build word clouds, an opensource package is used. See resource section at the end.
@@ -22,7 +22,7 @@ To build word clouds, an opensource package is used. See resource section at the
 
 The total numbers of words used for generating two word clouds were almost equal. As shown in the below figures, the first thing that stood out from the two word clouds are their general patterns. In the first part, the frequencies of extracted words are quite balanced. On the contrary, in the second part, some words were definitely more used that the others. These outstanding words are adjectives/adverbes that might strengthen the feelings in the story; for example, "plus", "tout", "bien", etc.
 
-There are both similarites and differences in outstanding words from the two word clouds. The common words that remained with some moderate frequencies in both parts (they were not stop words because they may provide sentiment or are part of conversations) are such as "très", "encore", "fait", "dit", "demandé", "comme", and "cela". However, the observable word differences between the two parts were the other characters' names and mundane things in part 1 that are fewer mentioned in part 2. These words in part 1 are "raymond", "marie", "maman", "chien", "femme" and "soleil". Meanwhile, the character "avocat" became more important in part 2. Other negation terms like "rien" and "jamais" also started to appear in part 2.
+There are both similarites and differences in outstanding words from the two word clouds. The common words that remained with some moderate frequencies in both parts (they were not stop words because they may provide sentiment or are part of conversations) are such as "très", "encore", "fait", "dit", "demandé" and "comme". However, the observable word differences between the two parts were the other characters' names and mundane things in part 1 that are fewer mentioned in part 2. These words in part 1 are "raymond", "marie", "maman", "chien", "femme" and "soleil". Meanwhile, the character "avocat" became more important in part 2. Other negation terms like "rien" and "jamais" also started to appear in part 2.
 
 Overall, the story in part 2 might present more degree of emotions whereas the story in part 1 were rather indifferent.
 
