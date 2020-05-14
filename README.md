@@ -26,7 +26,7 @@ There are both similarites and differences in outstanding words from the two wor
 
 Overall, the story in part 2 might present more degree of emotions whereas the story in part 1 were rather indifferent.
 
-![alt text](https://github.com/ornwipa/etranger_word_cloud/cloudOneWord_part1.png) ![alt text](https://github.com/ornwipa/word_cloud/cloudOneWord_part2.png)
+![alt text](https://github.com/ornwipa/etranger_word_cloud/blob/master/cloudOneWord_part1.png) ![alt text](https://github.com/ornwipa/etranger_word_cloud/blob/master/cloudOneWord_part2.png)
 
 ## Resources
 
