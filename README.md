@@ -4,11 +4,11 @@
 
 The novel, **l’Étranger** (1942) by Albert Camus,  has two parts that represent distictive sentiments. Part 1, before the crime incident, the main character's narration was indifferent and mostly about the "normal" day. Part 2, after the murder, there "may" appear more emotional statement during the time in prison and the trial. 
 
-This program creates "word clouds" to visualize the sentiment that lies in each part of the book. This "analysis" is meant to be quantitative and the interpretation may be subjective.
+This program creates "word clouds" to visualize the sentiment that lies in each part of the book. This "analysis" is meant to be qualtitative and the interpretation may be subjective.
 
 ## Methods
 
-The book in original language (French) was downloaded from this [website](http://www.bouquineux.com/index.php?telecharger=380&Camus-L_%C3%89tranger) and converted from pdf to text files.
+The book in original language (French) was downloaded from this [website](http://www.bouquineux.com/index.php?telecharger=380&Camus-L_%C3%89tranger) and converted from pdf to [text files](https://github.com/ornwipa/etranger_word_cloud/blob/master/text/Camus-L_Etranger.txt).
 
 Some of the **natural language processing** techniques were employed to create the word clouds. This includes:
 - text mining and re-constructing paragraphs
@@ -16,9 +16,9 @@ Some of the **natural language processing** techniques were employed to create t
 - removing **"stop words"** (in french); the stop word set covers pronouns e.g. "je", "y", "lui", prepositions e.g. "à", "avec", "de", parts of speech of the verbes "avoir" and "être", articles e.g. "le", "l'".
 - tokenizing words from string
 
-To build word clouds, an opensource package is used. See resource section at the end.
+To build word clouds, an opensource package is used. See the resource section.
 
-## Results and Interpretations
+## Results and Interpretation
 
 The total numbers of words used for generating two word clouds were almost equal. As shown in the below figures, the first thing that stood out from the two word clouds are their general patterns. In the first part, the frequencies of extracted words are quite balanced. On the contrary, in the second part, some words were definitely more used that the others. These outstanding words are adjectives/adverbes that might strengthen the feelings in the story; for example, "plus", "tout", "bien", etc.
 
@@ -33,3 +33,9 @@ Overall, the story in part 2 might present more degree of emotions whereas the s
 For resource about word cloud, see: 
 - [original word cloud development](https://amueller.github.io/word_cloud)
 - [example](https://www.tutorialspoint.com/create-word-cloud-using-python)
+
+## Next Steps
+
+In addition to the qualitative representation like word cloud, other techiniques can be employed for analyzing the text. The next steps are:
+- [supervised learning / classification](https://github.com/ornwipa/etranger_ngram_logit)
+- [unsupervised learning / clustering](https://github.com/ornwipa/etranger_pca_clstr)
